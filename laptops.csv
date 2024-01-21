@@ -1,0 +1,6 @@
+id,brand,model,screen_size,cpu_model,ram_size,hard_drive_size,graphics_card_type,graphics_card_model,operating_system,color,prize
+128754,MSI,MSI GF63 Thin,15.6,Intel Core i5,16,256,Dedicated,NVIDIA GeForce RTX2050,Windows 11 Home,black,82500
+140955,MSI,MSI Titan GT77,17.3,Intel Core i9,64,2048,Dedicated,NVIDIA GeForce RTX3080Ti,Windows 11 Home,black,359990
+148736,MSI,MSI Sword 17,17.3,Intel Core i5,16,512,Dedicated,NVIDIA GeForce RTX 3050,Windows 11 Home,black,95990
+148736,DELL,DELL Vostro 3520,15.6,Intel Core i3,8,256,Integrated,Intel UHD Graphics,Linux,black,41990
+148736,DELL,DELL Vostro 3520,15.6,Intel Core i5,16,512,Integrated,Intel Iris Xe graphics,Linux,grey,59990
