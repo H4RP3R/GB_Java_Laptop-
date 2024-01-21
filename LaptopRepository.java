@@ -17,36 +17,30 @@ public class LaptopRepository {
         Set<Laptop> resSet = new HashSet<>();
 
         for (Laptop laptop : laptopsSet) {
+            boolean matches = true;
             for (var op : options.entrySet()) {
-                boolean matches = true;
-                if (op.getKey() == "brand" && laptop.getBrand() != op.getValue()) {
+                if (op.getKey().equals("brand") && !laptop.getBrand().equals(op.getValue())) {
                     matches = false;
-                } else if (op.getKey() == "model" && !laptop.getModel().equals(op.getValue())) {
+                } else if (op.getKey().equals("screenSize")
+                        && laptop.getScreenSize() < Double.parseDouble(op.getValue())) {
                     matches = false;
-                } else if (op.getKey() == "screenSize" && laptop.getScreenSize() < Double.parseDouble(op.getValue())) {
+                } else if (op.getKey().equals("cpuModel") && !laptop.getCpuModel().equals(op.getValue())) {
                     matches = false;
-                } else if (op.getKey() == "cpuModel" && !laptop.getCpuModel().equals(op.getValue())) {
+                } else if (op.getKey().equals("ramSize") && laptop.getRamSize() < Integer.parseInt(op.getValue())) {
                     matches = false;
-                } else if (op.getKey() == "ramSize" && laptop.getRamSize() < Integer.parseInt(op.getValue())) {
-                    matches = false;
-                } else if (op.getKey() == "hardDriveSize"
+                } else if (op.getKey().equals("hardDriveSize")
                         && laptop.getHardDriveSize() < Integer.parseInt(op.getValue())) {
                     matches = false;
-                } else if (op.getKey() == "graphicsCardType" && !laptop.getGraphicsCardType().equals(op.getValue())) {
+                } else if (op.getKey().equals("operatingSystem")
+                        && !laptop.getOperatingSystem().equals(op.getValue())) {
                     matches = false;
-                } else if (op.getKey() == "graphicsCardModel" && !laptop.getGraphicsCardModel().equals(op.getValue())) {
-                    matches = false;
-                } else if (op.getKey() == "operatingSystem" && !laptop.getOperatingSystem().equals(op.getValue())) {
-                    matches = false;
-                } else if (op.getKey() == "color" && !laptop.getColor().equals(op.getValue())) {
-                    matches = false;
-                } else if (op.getKey() == "price" && laptop.getPrice() >= Double.parseDouble(op.getValue())) {
+                } else if (op.getKey().equals("color") && !laptop.getColor().equals(op.getValue())) {
                     matches = false;
                 }
+            }
 
-                if (matches) {
-                    resSet.add(laptop);
-                }
+            if (matches) {
+                resSet.add(laptop);
             }
         }
 
