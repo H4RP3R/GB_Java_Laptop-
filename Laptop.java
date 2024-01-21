@@ -129,7 +129,7 @@ public class Laptop {
 
     @Override
     public String toString() {
-        String fmtStr = String.format("ID:%d %s %1.1f inches\tRAM: %2d CPU: %s - %1.2f₽", id, model, screenSize,
+        String fmtStr = String.format("ID:%d %25s %1.1f″ | RAM: %2d | CPU: %13s - %1.2f₽", id, model, screenSize,
                 ramSize, cpuModel, price);
         return fmtStr;
     }
