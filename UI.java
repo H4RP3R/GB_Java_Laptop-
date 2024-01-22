@@ -12,7 +12,7 @@ public class UI {
             System.out.println("2. Set search options.");
             System.out.println("3. Exit.");
             System.out.print("Enter menu item number: ");
-            String userInput = iScanner.nextLine();
+            String userInput = iScanner.nextLine().trim();
 
             switch (userInput) {
                 case "1":
@@ -45,43 +45,43 @@ public class UI {
         System.out.println("\nEnter a value or leave the field blank");
 
         System.out.print("Brand: ");
-        String brand = iScanner.nextLine();
+        String brand = iScanner.nextLine().trim().trim();
         if (!brand.isEmpty()) {
             filtOpt.put("brand", brand);
         }
 
         System.out.print("Screen size: ");
-        String screenSize = iScanner.nextLine();
+        String screenSize = iScanner.nextLine().trim();
         if (!screenSize.isEmpty()) {
             filtOpt.put("screenSize", screenSize);
         }
 
         System.out.print("CPU model: ");
-        String cpuModel = iScanner.nextLine();
+        String cpuModel = iScanner.nextLine().trim();
         if (!cpuModel.isEmpty()) {
             filtOpt.put("cpuModel", cpuModel);
         }
 
         System.out.print("RAM size: ");
-        String ramSize = iScanner.nextLine();
+        String ramSize = iScanner.nextLine().trim();
         if (!ramSize.isEmpty()) {
             filtOpt.put("ramSize", ramSize);
         }
 
         System.out.print("Hard drive size: ");
-        String hardDriveSize = iScanner.nextLine();
+        String hardDriveSize = iScanner.nextLine().trim();
         if (!hardDriveSize.isEmpty()) {
             filtOpt.put("hardDriveSize", hardDriveSize);
         }
 
         System.out.print("OS: ");
-        String operatingSystem = iScanner.nextLine();
+        String operatingSystem = iScanner.nextLine().trim();
         if (!operatingSystem.isEmpty()) {
             filtOpt.put("operatingSystem", operatingSystem);
         }
 
         System.out.print("Color: ");
-        String color = iScanner.nextLine();
+        String color = iScanner.nextLine().trim();
         if (!color.isEmpty()) {
             filtOpt.put("color", color);
         }
