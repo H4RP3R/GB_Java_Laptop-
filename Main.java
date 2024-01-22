@@ -65,8 +65,5 @@ public class Main {
 
         UI ui = new UI();
         ui.mainMenu(laptopRep);
-        // while (true) {
-        // ui.mainMenu(laptopRep);
-        // }
     }
 }

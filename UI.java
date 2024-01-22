@@ -21,8 +21,12 @@ public class UI {
 
                 case "2":
                     Map<String, String> filterOptions = getFilterOptions(iScanner);
-                    Set<Laptop> filteredResult = laptopsRep.filterLaptops(filterOptions);
-                    printLaptopSet(filteredResult);
+                    try {
+                        Set<Laptop> filteredResult = laptopsRep.filterLaptops(filterOptions);
+                        printLaptopSet(filteredResult);
+                    } catch (NumberFormatException e) {
+                        System.err.printf("\n!!! [Wrong filter options] %s\n\n", e);
+                    }
                     break;
 
                 case "3":
