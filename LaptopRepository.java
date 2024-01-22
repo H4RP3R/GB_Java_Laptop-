@@ -19,12 +19,12 @@ public class LaptopRepository {
         for (Laptop laptop : laptopsSet) {
             boolean matches = true;
             for (var op : options.entrySet()) {
-                if (op.getKey().equals("brand") && !laptop.getBrand().equals(op.getValue())) {
+                if (op.getKey().equals("brand") && !laptop.getBrand().equalsIgnoreCase(op.getValue())) {
                     matches = false;
                 } else if (op.getKey().equals("screenSize")
                         && laptop.getScreenSize() < Double.parseDouble(op.getValue())) {
                     matches = false;
-                } else if (op.getKey().equals("cpuModel") && !laptop.getCpuModel().equals(op.getValue())) {
+                } else if (op.getKey().equals("cpuModel") && !laptop.getCpuModel().equalsIgnoreCase(op.getValue())) {
                     matches = false;
                 } else if (op.getKey().equals("ramSize") && laptop.getRamSize() < Integer.parseInt(op.getValue())) {
                     matches = false;
@@ -32,9 +32,9 @@ public class LaptopRepository {
                         && laptop.getHardDriveSize() < Integer.parseInt(op.getValue())) {
                     matches = false;
                 } else if (op.getKey().equals("operatingSystem")
-                        && !laptop.getOperatingSystem().equals(op.getValue())) {
+                        && !laptop.getOperatingSystem().equalsIgnoreCase(op.getValue())) {
                     matches = false;
-                } else if (op.getKey().equals("color") && !laptop.getColor().equals(op.getValue())) {
+                } else if (op.getKey().equals("color") && !laptop.getColor().equalsIgnoreCase(op.getValue())) {
                     matches = false;
                 }
             }
