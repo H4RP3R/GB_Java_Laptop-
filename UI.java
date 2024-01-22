@@ -92,6 +92,10 @@ public class UI {
     public void printLaptopSet(Set<Laptop> laptops) {
         System.out.println();
 
+        if (laptops.isEmpty()) {
+            System.out.println("The list is empty...");
+        }
+
         for (Laptop laptop : laptops) {
             System.out.println(laptop);
         }
