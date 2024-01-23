@@ -45,7 +45,7 @@ public class UI {
         System.out.println("\nEnter a value or leave the field blank");
 
         System.out.print("Brand: ");
-        String brand = iScanner.nextLine().trim().trim();
+        String brand = iScanner.nextLine().trim();
         if (!brand.isEmpty()) {
             filtOpt.put("brand", brand);
         }
